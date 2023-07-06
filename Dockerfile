@@ -6,4 +6,5 @@ LABEL authors="jsween5723"
 WORKDIR /server
 COPY ./build/libs .
 EXPOSE 5723
+HEALTHCHECK --interval=10s --timeout=3s CMD curl -f http://localhost:5723/actuator/health || exit 1
 CMD java -jar *-SNAPSHOT.jar
