@@ -86,7 +86,7 @@ jobs:
         run: |
           echo '${{ env.ESC_CONFIG_TASK_DEFINITION }}' >> task_definition.json
       - name: Amazon ECS "Deploy Task Definition" Action for GitHub Actions
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: task_definition.json
           service: ${{ vars.SERVICE_NAME }}
