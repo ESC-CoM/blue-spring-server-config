@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt install curl -y
 # java17 install
 WORKDIR /src/main/resources
-COPY ./src/main/resources /src/main/resources
+COPY ./src/main/resources ./src/main/resources
 WORKDIR /server
 COPY ./build/libs .
 EXPOSE 5723
