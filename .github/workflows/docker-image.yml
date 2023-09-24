@@ -77,7 +77,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY }}
           aws-region: ap-northeast-2
       - name: AWS Secrets Manager GitHub Action
         uses: aws-actions/aws-secretsmanager-get-secrets@v1.0.4
